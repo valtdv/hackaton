@@ -1,61 +1,64 @@
 <html>
-<h2>Registro</h2>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Styles.css">
+    <script src="https://www.gstatic.com/firebasejs/ui/3.6.0/firebase-ui-auth__es.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.6.0/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBnPVt35NN7mBm8OD57IpkttTc7K-H_08k",
+            authDomain: "bbdd-f2c64.firebaseapp.com",
+            databaseURL: "https://bbdd-f2c64.firebaseio.com",
+            projectId: "bbdd-f2c64",
+            storageBucket: "bbdd-f2c64.appspot.com",
+            messagingSenderId: "206859353707"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 
 
 <body>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="center-block">
-                <h4>Crea tu cuenta.</h4>
-                <div class="form-group">
-                    <label asp-for="Documento"></label>
-                    <input asp-for="Documento" class="form-control" />
-                    <span asp-validation-for="Documento" class="text-danger"></span>
-                </div>
-                <hr />
-                <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="nombre"></label>
-                    <input asp-for="nombre" class="form-control" />
-                    <span asp-validation-for="nombre" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label for="Localidad">Localidad</label>
-                    <select class="form-control" id="sel1">
-                        <option>Suroccidente</option>
-                        <option>Suroriente</option>
-                        <option>Norte-Centro Histórico</option>
-                        <option>Metropolitana</option>
-                        <option>Riomar</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Email"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Password"></label>
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ConfirmPassword"></label>
-                    <input asp-for="ConfirmPassword" class="form-control" />
-                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                </div>
-                <button type="submit" class="btn btn-default">Registrar</button>
-            </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Registro</h1>
+            <p class="lead">
+                Haz parte de nuestro equipo, e interactua, opina, y decide, acerca del futuro de tu
+                ciudá
+            </p>
         </div>
+        <div id="firebaseui-auth-container"></div>
     </div>
+
+    
+    <script>
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                // List of OAuth providers supported.
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            ],
+            signInSuccessUrl: 'Encuesta.html'
+            // Other config options...
+        });
+
+    </script>
 </body>
+
 </html>
