@@ -1,4 +1,7 @@
 
+:root{
+    background-color: azure;
+}
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -29,19 +32,24 @@ body {
 
 
 /* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
     /* Hide captions */
-    .carousel-caption {
+    /*.carousel-caption {
         display: none;
     }
-}
+}*/
 .Preguntas {
     font-size: 18px;
     padding-top:10px;
+    padding-bottom: 10px;
 }
 .Infor2 {
     grid-column-end: auto;
     display:grid;
+}
+.B{
+    padding-left:40px;
+    padding-bottom: 20px;
 }
 .TextoPr{
     font-size:1.1em;    

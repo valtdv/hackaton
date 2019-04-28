@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="Encusta.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <title>Encuesta</title>
+</head>
+<body>
+        
+              <nav class="navbar navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#">Inicio</a>
+              </nav>
+    
+        <script>
+                function MyFuncion() {
+                    document.getElementById("Panelzote").innerHTML = "Informacion resumida con ejemplos de la problemática 1";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action active";
+                }
+                function MyFuncion1() {
+                    document.getElementById("Panelzote").innerHTML = "Informacion resumida con ejemplos de la problemática 2";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action active";
+                }
+                function MyFuncion2() {
+                    document.getElementById("Panelzote").innerHTML = "Informacion resumida con ejemplos de la problemática 3";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action active";
+                }
+                function MyFuncion3() {
+                    document.getElementById("Panelzote").innerHTML = "Informacion resumida con ejemplos de la problemática 4";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action active";
+                }
+                function MyFuncion4() {
+                    document.getElementById("Panelzote").innerHTML = "Informacion resumida con ejemplos de la problemática 5";
+                    document.getElementById("listR1").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR2").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR3").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR4").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action";
+                    document.getElementById("listR5").className = "list-group-item list-group-item-action active";
+                }
+            </script>
+    
+    <div class="B">
+        <h1>Priorizacíon de las problemáticas</h1>
+        <h4 class="Preguntas" style="font-size:1.1em; ">Explicacion detallada de las problemáticas:</h4>
+        <div class="row">
+            <div class="col-md-4" >
+                <!---<section>-->
+                    <div class="list-group" id="list-tab" role="tablist" style="width: 200px, ;">
+                        <a class="list-group-item list-group-item-action" id="listR1" data-toggle="list" onclick="MyFuncion()" role="button" aria-controls="home">Problemática #1</a>
+                        <a class="list-group-item list-group-item-action" id="listR2" data-toggle="list" onclick="MyFuncion1()" role="button" aria-controls="profile">Problemática #2</a>
+                        <a class="list-group-item list-group-item-action" id="listR3" data-toggle="list" onclick="MyFuncion2()" role="button" aria-controls="messages">Problemática #3</a>
+                        <a class="list-group-item list-group-item-action" id="listR4" data-toggle="list" onclick="MyFuncion3()" role="button" aria-controls="settings">Problemática #4</a>
+                        <a class="list-group-item list-group-item-action" id="listR5" data-toggle="list" onclick="MyFuncion4()" role="button" aria-controls="settings">Problemática #5</a>
+                    </div>
+            </div>
+            <div class="col xs-20 col-md-8">
+                <div class="Infor">
+                    <div class="Infor2">
+                        <div class="panel panel-default">
+                            <div class="panel-body" id="Panelzote" style="height: 200px;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="B">
+    <h4 class="TextoPr">A continuación ordene de forma ascendente la importancia que tienen los siguientes retos en su localidad (1 el más importante/5 el menos importante):</h4>
+    <span class="help-block" style="font-size:.80em">*No puede haber dos o mas retos en la misma posicion.</span>
+        <div class="row">
+            <div class="col-md-4">
+                    <h5 style="font-size: .92em">1) Problemática #1</h5>
+                    <label class="radio-inline"><input type="radio" name="optradio">1</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">2</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">3</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">4</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">5</label>
+                    <h5 style="font-size: .92em">2) Problemática #2</h5>
+                    <label class="radio-inline"><input type="radio" name="optrad">1</label>
+                    <label class="radio-inline"><input type="radio" name="optrad">2</label>
+                    <label class="radio-inline"><input type="radio" name="optrad">3</label>
+                    <label class="radio-inline"><input type="radio" name="optrad">4</label>
+                    <label class="radio-inline"><input type="radio" name="optrad">5</label>
+                    <h5 style="font-size: .92em">3) Problemática #3</h5>
+                    <label class="radio-inline"><input type="radio" name="optradi">1</label>
+                    <label class="radio-inline"><input type="radio" name="optradi">2</label>
+                    <label class="radio-inline"><input type="radio" name="optradi">3</label>
+                    <label class="radio-inline"><input type="radio" name="optradi">4</label>
+                    <label class="radio-inline"><input type="radio" name="optradi">5</label>
+                    <h5 style="font-size: .92em">4) Problemática #4</h5>
+                    <label class="radio-inline"><input type="radio" name="optrao">1</label>
+                    <label class="radio-inline"><input type="radio" name="optrao">2</label>
+                    <label class="radio-inline"><input type="radio" name="optrao">3</label>
+                    <label class="radio-inline"><input type="radio" name="optrao">4</label>
+                    <label class="radio-inline"><input type="radio" name="optrao">5</label>
+                    <h5 style="font-size: .92em">5) Problemática #5</h5>
+                    <label class="radio-inline"><input type="radio" name="tradio">1</label>
+                    <label class="radio-inline"><input type="radio" name="tradio">2</label>
+                    <label class="radio-inline"><input type="radio" name="tradio">3</label>
+                    <label class="radio-inline"><input type="radio" name="tradio">4</label>
+                    <label class="radio-inline"><input type="radio" name="tradio">5</label>
+                    <hr />
+                    <button type="submit" class="btn btn-default">Guardar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
